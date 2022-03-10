@@ -1,7 +1,7 @@
 import React from "react";
 import "./ImageList.css";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
+// import ImageList from "@mui/material/ImageList";
+// import ImageListItem from "@mui/material/ImageListItem";
 import Box from "@mui/material/Box";
 import ImageCard from "./ImageCard";
 
@@ -93,18 +93,18 @@ const ImageListComp = (props) => {
   //   </>
   // );
 
-  const images1 = props.images1.map(({ alt_description, id, urls }) => {
-    return <img alt={alt_description} key={id} src={urls.regular} />;
+  const images1 = props.images1.map((image) => {
+    return <ImageCard key={image.id} image={image} />;
   });
-  const images2 = props.images2.map(({ alt_description, id, urls }) => {
-    return <img alt={alt_description} key={id} src={urls.regular} />;
+  const images2 = props.images2.map((image) => {
+    return <ImageCard key={image.id} image={image} />;
   });
   return (
     <div>
-      <Box className='image-list' sx={{ pb: 2 }}>
+      <Box className="image-list" sx={{ pb: 2 }}>
         {images1}
       </Box>
-      <Box className='image-list' sx={{ pb: 2 }}>
+      <Box className="image-list" sx={{ pb: 2 }}>
         {images2}
       </Box>
     </div>

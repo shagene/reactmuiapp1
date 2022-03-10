@@ -1,7 +1,7 @@
 import React from "react";
 import unsplash from "../api/unsplash";
 import SearchBar from "./SearchBar";
-import Box from "@mui/material/Box";
+// import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import ImageListComp from "./ImageList";
 import { CssBaseline } from "@mui/material";
